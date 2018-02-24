@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="build/react.js"></script>
+    <script src="build/react-dom.js"></script>
+    <script src="build/browser.min.js"></script>
+</head>
+<body>
+    <div id="app"></div>
+    <script type="text/babel">
+// render函数看起来像是返回了一个html  但是 实际上返回的 是jsx  jsx在运行的时候被翻译成常规的javascript、
+// 被翻译后看起来像是：
+// class Mytag extends React.Component {
+//   render() {
+//     return (
+//       React.createElement(
+//         'h1', type:元素类型
+//         {className: 'large'}, prop：元素属性
+//         'Hello World' childred：元素子节点
+//       )
+//     );
+//   }
+// }
+
+
+// document.createElement() 是创建一个指定的元素节点  参数只有一个 是节点名字 nodeName
+
+// React.createElement() 是创建指定类型的react元素节点  参数有三个  （type props children） 
+//                                                    第一个参数必填：元素类型   第二个参数可填：元素属性 第三个参数可填：元素子节点
+
+
+// 虽然jsx看起来像是html 但是 实际上是用 React.createElement(type,object props,children)来编写声明 大怒增加渲染时 他输出一个react元素树
+// 或者是该组件输出的html元素的虚拟表示    然后react将基于此react元素的表示来确定对实际dom所做的更改
+
+        class Mytag extends React.Component {
+            render() {
+                return (
+                    <h1 className='large'>Hello World</h1>
+                );
+            }
+        }
+        
+        ReactDOM.render(
+            <Mytag/>,
+            document.querySelector("#app")
+        )
+    </script>
+</body>
+</html>

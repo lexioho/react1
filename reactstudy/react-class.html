@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="build/react.js"></script>
+    <script src="build/react-dom.js"></script>
+    <script src="build/browser.min.js"></script>
+</head>
+<body>
+    <div id="app"></div>
+    <script type="text/babel">
+        class Mytag extends React.Component {
+            render() {
+                return (
+                    <h1 className='large'>Hello World</h1>
+                );
+            }
+        }
+        
+        ReactDOM.render(
+            <Mytag/>,
+            document.querySelector("#app")
+        )
+//////     ReactDOM.render()的第一个参数是要呈现 _什么_，第二个是 在_哪里_呈现：
+    </script>
+</body>
+</html>

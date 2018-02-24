@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="build/react.js"></script>
+    <script src="build/react-dom.js"></script>
+    <script src="build/browser.min.js"></script>
+</head>
+<body>
+    <div id="content"></div>
+    <!--
+document.createElement 是创建一个指定的元素节点参数只有一个 ：nodeName
+
+React.createElement 是创建指定类型的react元素节点 参数有三个 1：type：元素类型 2：props：元素属性 3：元素子节点   
+
+
+
+
+    -->
+    <script type="text/babel">
+    var child1 = React.createElement('li', null, 'First Text Content');  
+    var child2 = React.createElement('li', null, 'Second Text Content');  
+    var child3 = React.createElement('li', null, 'Third Text Content');  
+    var root = React.createElement('ul', { className: 'my-list' }, child1, child2, child3);  
+    ReactDOM.render(  
+            root,  
+            document.getElementById('content')  
+    ); 
+    </script>
+</body>
+</html>

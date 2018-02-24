@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <script src="build/react.js"></script>
+    <script src="build/react-dom.js"></script>
+    <script src="build/browser.min.js"></script>
+</head>
+<body>
+    <div id="app"></div>
+   <script type="text/babel">
+   class App extends React.Component {
+    render() {
+      return (
+        <div className="notificationsFrame">
+          <div className="panel">
+            
+          </div>
+        </div>
+      )
+    }
+  }
+  class Header extends React.Component {
+    render() {
+      return (
+        <div className="header">
+          <div className="fa fa-more"></div>
+
+          <span className="title">Timeline</span>
+
+          <input
+            type="text"
+            className="searchInput"
+            placeholder="Search ..." />
+
+          <div className="fa fa-search searchIcon"></div>
+        </div>
+      )
+    }
+  }
+  ReactDOM.render(
+    <App/>,
+    document.querySelector("#app")
+  )
+   </script>
+</body>
+</html>
